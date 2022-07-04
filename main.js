@@ -21,7 +21,26 @@ start.addEventListener('click', function(){
     }
 })
 
+reset.addEventListener('click', function(){
+    wm.innerText = 30;
+    ws.innerText = "00";
 
+    bm.innerText = 5;
+    bs.innerText = "00";
+
+    document.getElementById('counter').innerText = 0;
+    stopInterval()
+    startTimer = undefined;
+})
+
+stop.addEventListener('click', function(){
+    stopInterval()
+    startTimer = undefined;
+})
+
+
+
+//start timer function 
 function timer(){
     // work timer countdown
     if (ws.innerText != 0){
@@ -46,14 +65,19 @@ function timer(){
 
             // increment counter by one if a full cycle is completed
             if(wm.innerText == 0 && ws.innertext == 0 && bm.innerText == 0 && bs.innerText == 0 ){
-                wm.innerText == 30;
-                ws.innerText == "00";
+                wm.innerText = 30;
+                ws.innerText = "00";
 
-                bm.innerText == 5;
-                bs.innerText == "00";
+                bm.innerText = 5;
+                bs.innerText = "00";
 
                 document.getElementById('counter').innerText++;
             }
 }
 
 
+
+// stop timer function
+function stopInterval(){
+    clearInterval(startTimer);
+}
