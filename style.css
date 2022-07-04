@@ -3,13 +3,17 @@ html{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
     
 }
 
 h1{
     color: black;
     font-family: 'Times New Roman', Times, serif;
-
+    
 }
 
 #container{
@@ -18,6 +22,7 @@ h1{
     width: 700px;
     margin: auto;
     border: 3px solid black;
+   
     
 
     display: grid;
